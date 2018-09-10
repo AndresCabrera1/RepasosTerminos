@@ -1,0 +1,91 @@
+2:34 p. m. 4/09/2018---------------------------------> Curso git <--------------------------------------------------------------------------------------
+
+1. para configurar el repositorio de manera golbal se utilizan los siguientes comandos.
+	para poner el email personal --> git config --global user.email unser@cualquier.com
+	para poner el nombre personal --> git config --global user.name pepito
+	para poner el Color a gir --> git config --global color.ui true pone el color a git 
+2. Crear rpositorios. 
+	git init nomRepo 
+	rm -rf <nombre de repositorio> elimina el repositorio
+3. Agregando, quitando y viendo el estatus de archivos
+	git status me mira si esta subido o no el los archivos	
+	git add  (-A --> agrega todos los arhivos)(-n me d ice si deseo agregar el archivo) grega los archivos.
+	git rm --cached (-f -> Elimina forsadamente un archivo) NomarChivo Elimina el archivo
+4.Confirmar cambios.
+	git commit -m <comentarios>
+	git commit --amend modifica el comit anterior
+	git log me enseña los commit que e echo
+5. etiqueteando confirmaciones
+	git tag -a 0.0.0 -m " comentario" me deja versionar el software que este haciendo
+	git tag -l me deja ver todas las versiones
+	git tag -d <numero de la version> Elimina la version
+	git tag -f -a <Version a modificar> -m "comentario" 
+	
+	para versionar un comit anterior se selecciona el chag (1234534545jh34gjkh34) 
+	git tag <version> <chag>
+6. revisar el historial del proyecto
+	git log me enseña los commit echos en el proyecto
+	git log --online (--graf me indica un pequeño grafico sobre los commit del proyecto) (-2 me muestra el numero de los commit "en este caso solo me ensaña 2" ) el hag lo pone de manera mas resumida
+7. diferencias entre commits
+	git diff (23534DFGERSD--> jash del commit) me enseña los cambios de un commit con otro
+	git diff jash0 jash1 me enseña los cambios especificos entre commits especificos
+8. Resets devolvernos en el tiempo
+	git reset --soft jash si tengo 10 commits y reseteo el numero 7 el 8,9 y 10 se borra y me queda por defecto el "7"
+	git reset --mixed me elimina el commit seleccionado y los archivos dentro del commit dejandomelos en "mi pc"
+	git reset --hard elimina el commit seleccionado los archivos y me los elimina del proyecto --> si se hace despues de ejecutarlo recupera los datos elminados
+9. Ramas de git
+	git branch <nombre rama> me crea la rama  
+	git branch -l me enseña las ramas en el repositorio
+	git branch -d (-D forza a eliminar la rama) <nombre rama> elimina la rama
+	git branch -m (nombre rama que ya esta) (nombre rama nuevo)me cambia el nombre de la rama
+10. navegacion entre ramas
+	git checkout (nombre de la rama) me lleva a la rama mencionada
+	git checkout (Sha ->2324SDFS45) me lleva al commit mencionado y me enseña en el proyecto que habia en ese commit especifico
+	git checkout -b (nombre rama) me crea la rama mencionada
+11. Revolver Ramas y resolviendo conflictos
+	git marge (nombre rama) primero paso a la rama donde voy a guardar y en el comando escribo la rama a ala cual voy a pasar los datos
+12. Guardando cambios temporal mente
+	git stash --> guarda temporal mente lo que e echo  y me puedo pasar a otra rama sin cargar lo que no e guardado
+	git stash list me enseña los diferentes Stash que tengo en la rama
+	git stash drop stash@{0} --> me elimina el stash
+	git stash apply stash@{0} --> para regresar al stash donde quede.
+13. mezclar commit de de una rama a otra
+	git cherry-pick (0894d24-- hash de otra rama) --> me mover un commit de una rama a otra
+14 Crear una llave para el proyecto
+	ssh-keygen -t rsa -b 4096 -C "email@email" (debe ser el mismo que hay en gitHub) --> crear llave
+	pbcopy < ~/.ssh/id_rsa.pub --lleva la llave a github
+	git remote add origin--> nombre alterno git@github.com:  (enlace de repositorio) 
+15. traer archivos al repositorio local
+	
+	git fetch origin master --> trae la rama del repositorio remoto
+	git merge origin/maseter (si da errror --allow-unrelated-histories) -> mescal la rama master local con la remoto 
+	git pull origin/master --> me hace el fetch y el marge en un solo paso en cambios del repositorio remoto
+
+16. enviar cambios de local a remoto
+	
+	git push origin master --> envia los archivos al master del repositorio remoto
+	git push origin master --tags me envia el versionamiento del proyecto
+	git push origin [nombre rama] --> envia el nombre de la rama local al remoto 
+		
+---------------------------------- curso Grid Layaut ------------------------------------------------------------------------------------------
+gird Container --> elemento padre donde se asigna un {display:Grid;}
+grid item--> hijos directos del padre grid conainer
+grid line--> linias divisorias horizontales y verticales
+grid Track--> espacio entre dos lineas adyacentes filas y colomnas [][]
+grid Cell--> espacio en dos filas adyacentes y 2 colimnas adyacentes[]
+gird Area--> espacio rodeado por 4 grid lines
+fr --> unidad de medida 3.3333 al ponerla me pone esa dimension 
+repeat(4, 1fr)--> gird se puede poner columnas o filas traduce 4 filas o columnas con 1fr
+minmax(min , max) agrega un valor minimo y maximo para el ramaño al hacer responsive
+		
+gird  implicito --> es el que no esta contemplado el que no se sabe cuanto mide y cuando sobra
+grid-auto-column: --> las que me sobra me las cuadra dependiendo de como las hata puesto
+grid-auto-rows: --> las que me sobra me las cuadra dependiendo de como las hata puesto
+	
+	cherpas-- Nombre celula.
+	
+	
+	
+	
+	
+	
