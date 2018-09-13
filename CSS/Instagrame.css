@@ -5,8 +5,9 @@ body{
 
 .container{
     display: grid;
-    grid-template: repeat(4, 40vh) / repeat(3,297px);
-    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, 293px);
+    /* grid-template-rows: repeat(4, 30%); */
+    grid-gap: 51px;
     justify-content:center;
     margin: 100px;
     /* nombre de la aimacion */
@@ -36,7 +37,7 @@ body{
 
 .intem img:hover {
     /* transform: translateZ(-25px); */
-    transform: scale(2);
+    transform: scale(1.1);
 }
 
 .intem:nth-of-type(4) img:hover{
