@@ -1,0 +1,62 @@
+body{
+    background: purple;
+    margin: 0;
+}
+
+.container{
+    display: grid;
+    grid-template: repeat(4, 40vh) / repeat(3,297px);
+    grid-gap: 5px;
+    justify-content:center;
+    margin: 100px;
+    /* nombre de la aimacion */
+    animation-name: Entrada;
+    /* duracion de la aimacion */
+    animation-duration: 2s;
+    /* despues de "tiempo" se lanza la animacion de la aimacion */
+    animation-delay: 1s;
+
+}
+
+@keyframes Entrada{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.intem img{
+    width: 100%;
+    height:90%;
+    border-radius: 10px;
+
+}
+
+.intem img:hover {
+    /* transform: translateZ(-25px); */
+    transform: scale(2);
+}
+
+.intem:nth-of-type(4) img:hover{
+    transform: rotateX(45deg);
+    transform-origin: top;
+}
+
+.intem:nth-of-type(6) i{
+    animation-name: palpito;
+    animation-duration: .4s;
+    animation-timing-function: ease;
+    animation-iteration-count:infinite; 
+    animation-direction:alternate;
+}
+
+@keyframes palpito{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
