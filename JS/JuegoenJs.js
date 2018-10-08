@@ -141,4 +141,6 @@
 
       function empezarJuego() {
         window.juego = new Juego()
+        hoy = new Date()
+        console.log(hoy)
       }
