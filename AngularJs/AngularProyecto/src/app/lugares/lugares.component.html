@@ -1,0 +1,14 @@
+<!-- inicio map -->
+<hr>
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+<hr>
+<!-- fin map -->
+<div class="container">
+  <ul class="list-group">
+    <ng-container *ngFor="let arreglos of arreglosObjeto; let i=index">
+    <a routerLink="/detalle/:{{arreglos.id}}"> <li class="list-group-item">{{arreglos.nombre}}</li></a>
+    </ng-container>
+  </ul>
+  </div>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Api con java</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">
+            <img src="../Multimedia/2000px-Accenture.svg.png" width="150" height="30" class="d-inline-block align-top"
+                alt="">
+        </a>
+    </nav>
+    <section class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="display-4">Consumiendo API con JS</h1>
+            <p class="lead">Consumiendo una API desede <kbd>https://swapi.co/api/</kbd> con javascript Un ejemplo
+                basico para comprender el concepto.</p>
+            <hr class="my-4">
+            <p>Ingrese un id numerico valido para hacer la consulta: <span><input type="text" id="idOptenido"
+                        placeholder=" Numero entre 1 ~ 80"></span></p>
+            <button class="btn btn-light" onclick="enviar(idOptenido.value)">Enviar</button>
+        </div>
+    </section>
+    <hr class="my-3">
+    <section class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Nombre Completo</th>
+                    <th scope="col">altura</th>
+                    <th scope="col">peso</th>
+                    <th scope="col">Color pelo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" id="idTabla"></th>
+                    <td id="nombreID"></td>
+                    <td id="alturaID"></td>
+                    <td id="pesoID"></td>
+                    <td id="colorPeloID"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <script src="../JS/apijava.js"></script>
+</body>
+
+</html>

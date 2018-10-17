@@ -1,0 +1,19 @@
+<ol class="breadcrumb">
+  	<li class="breadcrumb-item">
+  		<a routerLink="/lugares">Lugares</a></li>
+  	<li class="breadcrumb-item active">{{lugar.nombre}}</li>
+</ol>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+           <h1>{{lugar.nombre}}</h1> 
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>{{lugar.descripcion}}</p>
+            <footer class="blockquote-footer"> este establecimiento esta a {{lugar.cercania}} m de donde te encuentras <cite title="Source Title">esta lejos  {{lugar.legania}}m <span class="badge badge-secondary">este es : {{lugar.plan}} </span></cite></footer>
+          </blockquote>
+        </div>
+      </div>
+</div>
